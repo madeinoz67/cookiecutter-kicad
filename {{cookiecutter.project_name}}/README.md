@@ -14,6 +14,7 @@
 Below are some handy resource links.
 
 * [KiCad](https://www.kicad.org/) is a Cross Platform and Open Source Electronics Design Automation suite.
+* [cookiecutter-kicad](https://github.com/madeinoz67/cookiecutter-kicad) a cookiecutter template for KiCad Projects.
 
 ## Authors
 
