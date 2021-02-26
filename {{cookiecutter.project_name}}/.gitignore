@@ -50,4 +50,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# TODO: Add CPP / Arduino ignores
+# mkdocs
+site/
+
+#TODO: Add CPP / Arduino ignores

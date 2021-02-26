@@ -1,0 +1,48 @@
+# project information
+site_name: "{{cookiecutter.project_name}}"
+site_author: "{{cookiecutter.project_author}}"
+site_description: "{{cookiecutter.project_description}}"
+
+# Configuration
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - header.autohide
+
+# Repository
+repo_name: "{{cookiecutter.github_user}}/{{cookiecutter.project_github_repo_name}}"
+repo_url: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_github_repo_name}}
+
+# plugins
+plugins:
+  - search
+  - print-site # <- needs to be last plugin
+
+# extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+# Copyright
+copyright: Copyright &copy; 2021 {{cookiecutter.project_author}}
+
+# footer customisation
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_github_repo_name}}
+
+# Page Tree
+nav:
+  - Home: index.md
+  - Change Log: changelog.md
+  - Contributors: contributors.md
+  - License: license.md
+# Google Analytics
+#google_analytics:
+#  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+# - auto
