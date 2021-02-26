@@ -7,6 +7,7 @@
 * {{ cookiecutter.project_name}}
 * A starter KiCad project structured in a manner of <https://hackaday.com/2017/05/18/kicad-best-practises-library-management/>
 
+
 ## Getting Started
 
 ## Resources
