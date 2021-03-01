@@ -1,0 +1,68 @@
+# project information
+site_name: "cookiecutter-kicad"
+site_author: "Stephen Eaton"
+site_description: "Cookiecutter template for KiCAD Hardware projects"
+
+# Configuration
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - header.autohide
+
+# Repository
+repo_name: "madeinoz67/cookiecutter-kicad"
+repo_url: "https://github.com/madeinoz67/cookiecutter-kicad"
+
+# plugins
+plugins:
+  - search
+  #- macros
+  - print-site # <- needs to be last plugin
+
+# extensions
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - footnotes
+  - meta
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.smartsymbols
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tabbed
+  - pymdownx.tilde
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.keys
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+# Copyright
+copyright: Copyright &copy; 2021 Stephen Eaton
+
+# footer customisation
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/madeinoz67
+    - icon: fontawesome/brands/twitter
+      link: "https://twitter.com/madeinoz"
+
+# Page Tree
+nav:
+  - Getting Started:
+      - index.md
+      - license.md
+  - Change Log: changelog.md
+  - Contributors: contributors.md
+  - References: index.md #TODO: References Documentation page
+# Google Analytics
+#google_analytics:
+#  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+# - auto

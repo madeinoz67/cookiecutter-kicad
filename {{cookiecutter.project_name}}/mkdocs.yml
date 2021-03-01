@@ -1,0 +1,76 @@
+# project information
+site_name: "{{cookiecutter.project_name}}"
+site_author: "{{cookiecutter.project_author}}"
+site_description: "{{cookiecutter.project_description}}"
+
+# Configuration
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - header.autohide
+
+# Repository
+repo_name: "{{cookiecutter.github_user}}/{{cookiecutter.project_github_repo_name}}"
+repo_url: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_github_repo_name}}
+
+# plugins
+plugins:
+  - search
+  #- macros
+  - print-site # <- needs to be last plugin
+
+# extensions
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - footnotes
+  - meta
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.smartsymbols
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tabbed
+  - pymdownx.tilde
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.keys
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+# Copyright
+copyright: Copyright &copy; 2021 {{cookiecutter.project_author}}
+
+# footer customisation
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_github_repo_name}}
+
+# Page Tree
+nav:
+  - Getting Started:
+      - index.md
+  - Hardware:
+      - Hardware: hardware.md
+      - License: license.md
+  - Firmware:
+      - Firmware: firmware.md
+      - License: license.md
+  - Bill of Materials:
+      - index.md
+  - Design:
+      - index.md
+  - Mechanical:
+      - index.md
+  - Change Log: changelog.md
+  - References: index.md
+# Google Analytics
+#google_analytics:
+#  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+# - auto

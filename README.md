@@ -1,4 +1,4 @@
-# Cookiecutter KiCad
+# Cookiecutter KiCAD
 
 ## Powered by [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/), Cookiecutter KiCad generates boilerplate for production-ready [KiCad](https://www.kicad.org) projects.
 
@@ -86,7 +86,7 @@ Would you like to learn more?  Check out the links below!
   Documentation](https://cookiecutter.readthedocs.io/en/latest/)
 * [Cookiecutter: Project Templates Made
   Easy](https://www.pydanny.com/cookie-project-templates-made-easy.html)
-* [KiCad](https://www.kicad.org)
+* [KiCAD](https://www.kicad.org)
 
 ## Author
 
