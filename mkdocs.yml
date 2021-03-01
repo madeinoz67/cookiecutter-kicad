@@ -1,7 +1,14 @@
 # project information
-site_name: "cookiecutter-kicad"
+site_name: "Cookiecutter for KiCAD"
 site_author: "Stephen Eaton"
-site_description: "Cookiecutter template for KiCAD Hardware projects"
+site_description: "Cookiecutter Boilerplate for KiCAD Hardware projects"
+
+# Page Tree
+nav:
+  - Home: index.md
+  - License: license.md
+  - Contributors: contributors.md
+  - Change Log: changelog.md
 
 # Configuration
 theme:
@@ -17,8 +24,6 @@ repo_url: "https://github.com/madeinoz67/cookiecutter-kicad"
 # plugins
 plugins:
   - search
-  #- macros
-  #- print-site # <- needs to be last plugin
 
 # extensions
 markdown_extensions:
@@ -56,15 +61,7 @@ extra:
     - icon: fontawesome/brands/twitter
       link: "https://twitter.com/madeinoz"
 
-# Page Tree
-nav:
-  - Getting Started:
-      - index.md
-      - license.md
-  - Change Log: changelog.md
-  - Contributors: contributors.md
-  - References: index.md #TODO: References Documentation page
 # Google Analytics
-#google_analytics:
-#  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
-# - auto
+google_analytics:
+  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+  - auto
