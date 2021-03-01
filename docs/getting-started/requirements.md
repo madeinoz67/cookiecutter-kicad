@@ -1,4 +1,4 @@
-To use the cookiecutter-kicad template it some utilities are required to be installed prior.
+To use the cookiecutter-kicad template some utilities are required to be installed first.
 
 * Python (preferably 3.x)
 * Python pip
