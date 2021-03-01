@@ -1,8 +1,8 @@
 # Cookiecutter KiCAD
 
-## Powered by [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/), Cookiecutter KiCad generates boilerplate for production-ready [KiCad](https://www.kicad.org) projects.
+Powered by [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/), Cookiecutter KiCad generates boilerplate for production-ready [KiCad](https://www.kicad.org) projects.
 
-[Projects Documentation - https://madeinoz67.github.io/cookiecutter-kicad/](https://madeinoz67.github.io/cookiecutter-kicad/)
+See [Project Documentation](https://madeinoz67.github.io/cookiecutter-kicad/) for more details.
 
 ## Features
 
@@ -15,7 +15,7 @@ including:
 - [x] A documentation structure to get you going using [Mkdocs-Materials](https://squidfunk.github.io/mkdocs-material/) that automatically publishes to the projects github.io site on release
 - [ ] Automated asset generation that incorporates into the documentation build, e.g. BOM, 3D Board Images
 - [ ] Implements a CICD pipeline for hardware and Firmware release management.
-- [x] [Pipenv](https://pipenv.pypa.io/en/latest/) Python Virtual Environment for KiCAD python
+- [x] [Pipenv](https://pipenv.pypa.io/en/latest/) Python Virtual Environment for KiCAD python plugins
 
 ## Usage
 
