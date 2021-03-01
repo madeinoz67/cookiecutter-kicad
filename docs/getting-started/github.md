@@ -1,7 +1,7 @@
 
 ## Initial Commit
 
-The very fist thing that should be done is to add your new project to source control, so create a git repo and push it there:
+The very first thing that should be done is to add your new project to source control, so create a git repo and push it there:
 
 ``` bash
 git init

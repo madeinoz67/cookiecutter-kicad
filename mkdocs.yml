@@ -7,6 +7,7 @@ site_description: "Cookiecutter Boilerplate for KiCAD Hardware projects"
 nav:
   - Home: index.md
   - Getting Started:
+      - getting-started/requirements.md
       - getting-started/new-project.md
       - getting-started/github.md
       - getting-started/documentation.md

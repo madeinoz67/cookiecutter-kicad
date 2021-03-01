@@ -1,13 +1,9 @@
 Let's pretend you want to create a hardware widget called "some widget". Rather than manually 
 creating the project directory structures and the documentation, get cookiecutter to do all the work.
 
-First, get Cookiecutter:
 
-``` bash
-pip install "cookiecutter>=1.4.0"`
-```
-
-Now run it against this repo:
+## Run Cookiecutter
+Now run cookiecutter against this repo:
 
 ``` bash
 cookiecutter https://github.com/madeinoz67/cookiecutter-kicad
@@ -45,11 +41,42 @@ Choose from 1, 2, 3, 4, 5, 6, 7 [1]:
 github_user [my_github_user]: fsmith
 ```
 
-Enter the project and take a look around:
+## Enter the new project and take a look around
 
 ``` bash
 cd some-widget/
 ls -a
+```
+
+### Install project dependencies
+
+``` bash
+make install
+<or>
+pipenv install
+```
+This will proceed to download and install all project the dependencies and create a local virtual python environment for just this project so your local environment wont be pollute or get module clashes
+
+pip modules can be added at any time to the project by using pipenv:
+
+``` bash
+pipenv install python_module
+```
+!!! Important
+    Always use pipenv to install project modules not pip.
+
+
+you can enter the virtual environment from anywhere in your project directory by:
+``` bash
+pipenv shell
+
+exit (to exit)
+```
+
+or if you want to run a command in the virtual environment:
+
+``` bash
+pipenv run some_command
 ```
 
 ## Open KiCad and open the project
