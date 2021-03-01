@@ -18,7 +18,7 @@ repo_url: "https://github.com/madeinoz67/cookiecutter-kicad"
 plugins:
   - search
   #- macros
-  - print-site # <- needs to be last plugin
+  #- print-site # <- needs to be last plugin
 
 # extensions
 markdown_extensions:
