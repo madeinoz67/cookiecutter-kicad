@@ -1,7 +1,7 @@
 # project information
-site_name: "{{cookiecutter.project_name}}"
-site_author: "{{cookiecutter.project_author}}"
-site_description: "{{cookiecutter.project_description}}"
+site_name: "cookiecutter-kicad"
+site_author: "Stephen Eaton"
+site_description: "Cookiecutter template for KiCAD Hardware projects"
 
 # Configuration
 theme:
@@ -11,8 +11,8 @@ theme:
     - header.autohide
 
 # Repository
-repo_name: "{{cookiecutter.github_user}}/{{cookiecutter.project_github_repo_name}}"
-repo_url: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_github_repo_name}}
+repo_name: "madeinoz67/cookiecutter-kicad"
+repo_url: "https://github.com/madeinoz67/cookiecutter-kicad"
 
 # plugins
 plugins:
@@ -44,32 +44,24 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
 # Copyright
-copyright: Copyright &copy; 2021 {{cookiecutter.project_author}}
+copyright: Copyright &copy; 2021 Stephen Eaton
 
 # footer customisation
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_github_repo_name}}
+      link: https://github.com/madeinoz67
+    - icon: fontawesome/brands/twitter
+      link: "https://twitter.com/madeinoz"
 
 # Page Tree
 nav:
   - Getting Started:
       - index.md
-  - Hardware:
-      - Hardware: hardware.md
-      - License: license.md
-  - Firmware:
-      - Firmware: firmware.md
-      - License: license.md
-  - Bill of Materials:
-      - index.md
-  - Design:
-      - index.md
-  - Mechanical:
-      - index.md
+      - license.md
   - Change Log: changelog.md
-  - References: index.md
+  - Contributors: contributors.md
+  - References: index.md #TODO: References Documentation page
 # Google Analytics
 #google_analytics:
 #  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
