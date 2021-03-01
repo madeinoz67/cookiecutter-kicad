@@ -2,19 +2,27 @@
 
 ## Powered by [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/), Cookiecutter KiCad generates boilerplate for production-ready [KiCad](https://www.kicad.org) projects.
 
+[Projects Documentation - https://madeinoz67.github.io/cookiecutter-kicad/](https://madeinoz67.github.io/cookiecutter-kicad/)
+
 ## Features
 
 The project you create from this template has a few features to be aware of
 including:
 
-* A [KiCad](https://www.kicad.org/) project structure to get you going
+- [x] Kicad v5.x supported
+- [ ] Kicad v6.x supported
+- [x] A [KiCAD](https://www.kicad.org/) project structure to get you going.
+- [x] A documentation structure to get you going using [Mkdocs-Materials](https://squidfunk.github.io/mkdocs-material/) that automatically publishes to the projects github.io site on release
+- [ ] Automated asset generation that incorporates into the documentation build, e.g. BOM, 3D Board Images
+- [ ] Implements a CICD pipeline for hardware and Firmware release management.
+- [x] [Pipenv](https://pipenv.pypa.io/en/latest/) Python Virtual Environment for KiCAD python
 
 ## Usage
 
 Let's pretend you want to create a hardware widget called "some widget". Rather than manually 
-creating the project directory structures, get cookiecutter to do all the work.
+creating the project directory structures and the documentation, get cookiecutter to do all the work.
 
-First, get Cookiecutter. Trust me, it's awesome:
+First, get Cookiecutter:
 
 ``` bash
 pip install "cookiecutter>=1.4.0"`
@@ -87,14 +95,14 @@ Would you like to learn more?  Check out the links below!
 * [Cookiecutter: Project Templates Made
   Easy](https://www.pydanny.com/cookie-project-templates-made-easy.html)
 * [KiCAD](https://www.kicad.org)
+* [Mkdocs-Materials](https://squidfunk.github.io/mkdocs-material/)
+* [Pipenv](https://pipenv.pypa.io/en/latest/)
 
 ## Author
 
 This program was created by [Stephen Eaton](https://github.com/madeinoz67).
 
 This project is [hosted on GitHub](https://github.com/madeinoz67/cookiecutter-kicad). Please feel free to submit pull requests.
-
-## Contributors
 
 ## License
 
