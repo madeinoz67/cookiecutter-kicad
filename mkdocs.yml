@@ -6,6 +6,10 @@ site_description: "Cookiecutter Boilerplate for KiCAD Hardware projects"
 # Page Tree
 nav:
   - Home: index.md
+  - Getting Started:
+      - getting-started/new-project.md
+      - getting-started/github.md
+      - getting-started/documentation.md
   - License: license.md
   - Contributors: contributors.md
   - Change Log: changelog.md
@@ -15,11 +19,14 @@ theme:
   name: material
   features:
     - navigation.tabs
+    - navigation.indexes
+    - navigation.expand
     - header.autohide
 
 # Repository
 repo_name: "madeinoz67/cookiecutter-kicad"
 repo_url: "https://github.com/madeinoz67/cookiecutter-kicad"
+edit_uri: ""
 
 # plugins
 plugins:
