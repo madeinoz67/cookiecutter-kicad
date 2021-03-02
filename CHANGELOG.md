@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased](https://github.com/madeinoz67/cookiecutter-kicad/tree/HEAD)
+
+**Fixed bugs:**
+
+- Documentation page is not updated with Current Changelog [\#4](https://github.com/madeinoz67/cookiecutter-kicad/issues/4)
+
 ## [v2021.0.2](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2021.0.2) (2021-03-02)
 
 **Closed issues:**
@@ -10,7 +16,6 @@
 
 **Fixed bugs:**
 
-- Documentation page is not updated with Current Changelog [\#4](https://github.com/madeinoz67/cookiecutter-kicad/issues/4)
 - update changelog action failing [\#3](https://github.com/madeinoz67/cookiecutter-kicad/issues/3)
 
 **Merged pull requests:**
