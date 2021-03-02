@@ -11,9 +11,10 @@ nav:
       - getting-started/new-project.md
       - getting-started/github.md
       - getting-started/documentation.md
-  - License: license.md
-  - Contributors: contributors.md
+  - Contributing: contributing.md
+  - Authors: authors.md
   - Change Log: changelog.md
+  - License: license.md
 
 # Configuration
 theme:
