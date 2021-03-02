@@ -4,6 +4,7 @@
 
 **Fixed bugs:**
 
+- Documentation page is not updated with Current Changelog [\#4](https://github.com/madeinoz67/cookiecutter-kicad/issues/4)
 - update changelog action failing [\#3](https://github.com/madeinoz67/cookiecutter-kicad/issues/3)
 
 **Merged pull requests:**
