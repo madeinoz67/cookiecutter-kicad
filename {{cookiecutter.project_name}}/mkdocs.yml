@@ -1,6 +1,6 @@
 # project information
 site_name: "{{cookiecutter.project_name}}"
-site_author: "{{cookiecutter.project_author}}"
+site_author: "{{cookiecutter.author_name}}"
 site_description: "{{cookiecutter.project_description}}"
 
 # Configuration
@@ -10,15 +10,39 @@ theme:
     - navigation.tabs
     - header.autohide
 
+# Page Tree
+nav:
+  - Home: index.md
+  - Checklists:
+      - checklists/sample.md
+      - checklists/sample2.md
+  - Hardware:
+      - Overview: hardware/overview.md
+      - Mechanical: hardware/mechanical.md
+      - License: license.md
+  - Firmware:
+      - Overview: firmware/overview.md
+      - License: license.md
+  - Bill of Materials:
+      - bom.md
+  - Design:
+      - design/design.md
+  - Authors: authors.md
+  - Change Log: changelog.md
+  - References: references.md
+
 # Repository
 repo_name: "{{cookiecutter.github_user}}/{{cookiecutter.project_github_repo_name}}"
 repo_url: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_github_repo_name}}
+edit_uri: ""
 
 # plugins
 plugins:
   - search
-  #- macros
-  - print-site # <- needs to be last plugin
+  - mermaid2
+
+extra_javascript:
+  - https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js
 
 # extensions
 markdown_extensions:
@@ -34,9 +58,15 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tabbed
   - pymdownx.tilde
-  - pymdownx.highlight
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
   - pymdownx.keys
+  - pymdownx.tasklist:
+      clickable_checkbox: true
+      custom_checkbox: true
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.emoji:
@@ -44,32 +74,13 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
 # Copyright
-copyright: Copyright &copy; 2021 {{cookiecutter.project_author}}
+copyright: Copyright &copy; 2021 {{cookiecutter.author_name}}
 
 # footer customisation
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_github_repo_name}}
-
-# Page Tree
-nav:
-  - Getting Started:
-      - index.md
-  - Hardware:
-      - Hardware: hardware.md
-      - License: license.md
-  - Firmware:
-      - Firmware: firmware.md
-      - License: license.md
-  - Bill of Materials:
-      - index.md
-  - Design:
-      - index.md
-  - Mechanical:
-      - index.md
-  - Change Log: changelog.md
-  - References: index.md
 # Google Analytics
 #google_analytics:
 #  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]

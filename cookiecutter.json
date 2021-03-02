@@ -13,5 +13,9 @@
         "OSHD",
         "TAPR",
         "CERN-OHL-P"
+    ],
+    "_copy_without_render": [
+        ".github/workflows/*.yml",
+        ".github/*.md"
     ]
 }

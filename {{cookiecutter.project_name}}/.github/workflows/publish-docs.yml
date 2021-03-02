@@ -1,12 +1,12 @@
-name: Publish docs via GitHub Pages
+name: Publish docs via GitHub Pages on release
 on:
-  push:
-    branches: [master]
-  pull_request:
-    branches: [master]
+  workflow_run:
+    workflows: ["Release"]
+    types:
+      - completed
 jobs:
   build:
-    name: Deploy docs
+    name: Build and Deploy docs
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main

@@ -5,10 +5,8 @@
 ## Project Features
 
 * {{ cookiecutter.project_name}}
-* A starter KiCad project structured in a manner of <https://hackaday.com/2017/05/18/kicad-best-practises-library-management/>
-
-
-## Getting Started
+* A starter KiCad project structured similar to <https://hackaday.com/2017/05/18/kicad-best-practises-library-management/>
+* A starter documentation structure based on the <https://hutscape.com/pine/> by Sayanee Basu <https://github.com/sayanee> and her great youtube video around hardware documentation <https://youtu.be/uPitFGqjyPU>.
 
 ## Resources
 
