@@ -2,6 +2,12 @@
 
 ## [Unreleased](https://github.com/madeinoz67/cookiecutter-kicad/tree/HEAD)
 
+**Closed issues:**
+
+- Release workflow error  [\#5](https://github.com/madeinoz67/cookiecutter-kicad/issues/5)
+
+## [v2021.0.1](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2021.0.1) (2021-03-02)
+
 **Fixed bugs:**
 
 - Documentation page is not updated with Current Changelog [\#4](https://github.com/madeinoz67/cookiecutter-kicad/issues/4)
