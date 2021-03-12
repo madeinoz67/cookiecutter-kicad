@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased](https://github.com/madeinoz67/cookiecutter-kicad/tree/HEAD)
+
+**Merged pull requests:**
+
+- Added env variable to deploy-docs action [\#9](https://github.com/madeinoz67/cookiecutter-kicad/pull/9)
+
 ## [v2021.0.3](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2021.0.3) (2021-03-02)
 
 **Fixed bugs:**
