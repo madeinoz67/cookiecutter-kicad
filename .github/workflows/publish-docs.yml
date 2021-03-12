@@ -4,18 +4,30 @@ on:
     workflows: ["Release"]
     types:
       - completed
+env:
+  PYTHON_VERSION: 3.x
+
 jobs:
-  build:
-    name: Build and Deploy docs
+  documentation:
+    name: Build documentation
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main
+      - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Deploy docs
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+      - name: Set up Python runtime
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install Python dependencies
+        run: |
+          pip install mkdocs-material \
+          mkdocs-macros-plugin
+
+      - name: Deploy documentation
         env:
           GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CONFIG_FILE: mkdocs.yml
-          EXTRA_PACKAGES: build-base
+        run: |
+          mkdocs gh-deploy --force
+          mkdocs --version
