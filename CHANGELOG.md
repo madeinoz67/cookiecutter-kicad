@@ -1,31 +1,19 @@
 # Changelog
 
-## [v2021.0.4](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2021.0.4) (2021-03-12)
-
-**Merged pull requests:**
-
-- Added env variable to deploy-docs action [\#9](https://github.com/madeinoz67/cookiecutter-kicad/pull/9)
-
-## [v2021.0.3](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2021.0.3) (2021-03-02)
+## [v2021.0.1](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2021.0.1) (2021-03-12)
 
 **Fixed bugs:**
 
 - Documentation page is not updated with Current Changelog [\#4](https://github.com/madeinoz67/cookiecutter-kicad/issues/4)
-
-## [v2021.0.2](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2021.0.2) (2021-03-02)
+- update changelog action failing [\#3](https://github.com/madeinoz67/cookiecutter-kicad/issues/3)
 
 **Closed issues:**
 
 - Release workflow error  [\#5](https://github.com/madeinoz67/cookiecutter-kicad/issues/5)
 
-## [v2021.0.1](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2021.0.1) (2021-03-02)
-
-**Fixed bugs:**
-
-- update changelog action failing [\#3](https://github.com/madeinoz67/cookiecutter-kicad/issues/3)
-
 **Merged pull requests:**
 
+- Added env variable to deploy-docs action [\#9](https://github.com/madeinoz67/cookiecutter-kicad/pull/9)
 - Feature project docs generation [\#2](https://github.com/madeinoz67/cookiecutter-kicad/pull/2)
 - Feature project docs generation [\#1](https://github.com/madeinoz67/cookiecutter-kicad/pull/1)
 
