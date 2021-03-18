@@ -1,5 +1,15 @@
 # Changelog
 
+## [Unreleased](https://github.com/madeinoz67/cookiecutter-kicad/tree/HEAD)
+
+**Closed issues:**
+
+- analytics on pages site not working [\#8](https://github.com/madeinoz67/cookiecutter-kicad/issues/8)
+
+**Merged pull requests:**
+
+- update git workflows within project template [\#7](https://github.com/madeinoz67/cookiecutter-kicad/pull/7)
+
 ## [v2021.0.1](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2021.0.1) (2021-03-12)
 
 **Fixed bugs:**
