@@ -1,5 +1,20 @@
 # Changelog
 
+## [Unreleased](https://github.com/madeinoz67/cookiecutter-kicad/tree/HEAD)
+
+**Implemented enhancements:**
+
+- Move dependency management to poetry [\#10](https://github.com/madeinoz67/cookiecutter-kicad/issues/10)
+- Update template workflows [\#6](https://github.com/madeinoz67/cookiecutter-kicad/issues/6)
+
+**Closed issues:**
+
+- mkdocs dependencies causing docs workflow to fail [\#11](https://github.com/madeinoz67/cookiecutter-kicad/issues/11)
+
+**Merged pull requests:**
+
+- implements poetry python dependency management [\#13](https://github.com/madeinoz67/cookiecutter-kicad/pull/13)
+
 ## [v2021.0.2](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2021.0.2) (2021-03-18)
 
 **Closed issues:**
