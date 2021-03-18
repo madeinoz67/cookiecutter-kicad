@@ -1,6 +1,6 @@
 # Changelog
 
-## [v2021.0.2](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2021.0.2) (2021-03-18)
+## [Unreleased](https://github.com/madeinoz67/cookiecutter-kicad/tree/HEAD)
 
 **Closed issues:**
 
