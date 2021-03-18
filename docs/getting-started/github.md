@@ -8,7 +8,7 @@ git init
 git add .
 git commit -m "initial project commit"
 git remote add origin git@github.com:fsmith/wireless-widget.git
-git push -u origin master
+git push -u origin main
 ```
 
 ## Github Project Settings

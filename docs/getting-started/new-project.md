@@ -53,22 +53,22 @@ ls -a
 ``` bash
 make install
 <or>
-pipenv install
+poetry install
 ```
 This will proceed to download and install all project the dependencies and create a local virtual python environment for just this project so your local environment wont be pollute or get module clashes
 
-pip modules can be added at any time to the project by using pipenv:
+python modules can be added at any time to the project by using poetry:
 
 ``` bash
-pipenv install python_module
+poetry add python_module
 ```
 !!! Important
-    Always use pipenv to install project modules not pip.
+    Always use poetry to install project python modules not pip.
 
 
 you can enter the virtual environment from anywhere in your project directory by:
 ``` bash
-pipenv shell
+poetry shell
 
 exit (to exit)
 ```
@@ -76,7 +76,7 @@ exit (to exit)
 or if you want to run a command in the virtual environment:
 
 ``` bash
-pipenv run some_command
+poetry run some_command
 ```
 
 ## Open KiCad and open the project

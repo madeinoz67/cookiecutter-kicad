@@ -6,6 +6,7 @@ on:
       - completed
 env:
   PYTHON_VERSION: 3.x
+  POETRY_VERSION: 1.1.4
 
 jobs:
   documentation:
@@ -20,15 +21,20 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
-      - name: Install Python dependencies
-        run: |
-          pip install mkdocs-material \
-          mkdocs-macros-plugin \
-          mkdocs-mermaid2-plugin
+      - name: Python Poetry Action
+        uses: abatilo/actions-poetry@v2.1.0
+        with:
+          poetry-version: ${{ env.POETRY_VERSION }}
+
+      - name: View poetry version
+        run: poetry --version
+
+      - name: Install project dependencies
+        run: poetry install
 
       - name: Deploy documentation
         env:
           GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
         run: |
-          mkdocs gh-deploy --force
-          mkdocs --version
+          poetry run mkdocs gh-deploy --force
+          poetry run mkdocs --version
