@@ -16,7 +16,7 @@ including:
 - [x] Automated Release and Changelog management.
 - [ ] Automated asset generation that incorporates into the documentation build, e.g. BOM, Schematics, PCB, 3D Board Images.
 - [ ] CICD pipeline for Hardware and Firmware testing.
-- [x] [Pipenv](https://pipenv.pypa.io/en/latest/) Python Virtual Environment for KiCAD python plugins.
+- [x] [Poetry](https://python-poetry.org/) Python Virtual Environment and dependency management for the project.
 - [x] [mermaid](https://mermaid-js.github.io/mermaid/#/) diagrams using markdown syntax.
 - [ ] [wavedrom](https://github.com/wavedrom/wavedrom) waveform diagrams using markdown syntax.
 
@@ -99,7 +99,7 @@ Would you like to learn more?  Check out the links below!
   Easy](https://www.pydanny.com/cookie-project-templates-made-easy.html)
 * [KiCAD](https://www.kicad.org)
 * [mkdocs-materials](https://squidfunk.github.io/mkdocs-material/)
-* [pipenv](https://pipenv.pypa.io/en/latest/)
+* [poetry](https://python-poetry.org/)
 
 ## Author
 

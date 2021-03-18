@@ -3,13 +3,13 @@
 .PHONY: serve build install
 
 install:
-	pipenv install
+	poetry install
 
 build:
-	pipenv run mkdocs build
+	poetry run mkdocs build
 
 serve: build
-	pipenv run mkdocs serve
+	poetry run mkdocs serve
 
 clean:
 	rm -rf site/
