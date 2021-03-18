@@ -10,3 +10,6 @@ build:
 
 serve: build
 	pipenv run mkdocs serve
+
+clean:
+	rm -rf site/

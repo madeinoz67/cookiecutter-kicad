@@ -1,0 +1,7 @@
+default_context:
+  project_name: "cookiecutter-kicad-demo"
+  project_github_repo_name: "cookiecutter-kicad-demo"
+  project_description: "Demo KiCAD project using cookiecutter-kicad template"
+  author_name: "Fred Smith"
+  author_email: "fsmith@somewhere.com"
+  github_user: "madeinoz67"

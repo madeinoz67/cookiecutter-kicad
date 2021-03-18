@@ -12,10 +12,13 @@ including:
 - [x] Kicad v5.x supported.
 - [ ] Kicad v6.x supported.
 - [x] A [KiCAD](https://www.kicad.org/) project structure to get you going.
-- [x] A project document structure to get you going using [Mkdocs-Materials](https://squidfunk.github.io/mkdocs-material/) that automatically publishes to the projects github.io site on release
-- [ ] Automated asset generation that incorporates into the documentation build, e.g. BOM, 3D Board Images.
-- [ ] Implements a CICD pipeline for Hardware and Firmware testing and release management.
+- [x] A starting project document structure using [Mkdocs-Materials](https://squidfunk.github.io/mkdocs-material/) that automatically publishes to the projects github.io pages site on release. Inspiration for the document structure is based on the <https://hutscape.com/pine/> by Sayanee Basu <https://github.com/sayanee> and her great YouTube video around hardware documentation <https://youtu.be/uPitFGqjyPU>.
+- [x] Automated Release and Changelog management.
+- [ ] Automated asset generation that incorporates into the documentation build, e.g. BOM, Schematics, PCB, 3D Board Images.
+- [ ] CICD pipeline for Hardware and Firmware testing.
 - [x] [Pipenv](https://pipenv.pypa.io/en/latest/) Python Virtual Environment for KiCAD python plugins.
+- [x] [mermaid](https://mermaid-js.github.io/mermaid/#/) diagrams using markdown syntax.
+- [ ] [wavedrom](https://github.com/wavedrom/wavedrom) waveform diagrams using markdown syntax.
 
 ## Usage
 
