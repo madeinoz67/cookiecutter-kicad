@@ -8,6 +8,7 @@
 
 **Merged pull requests:**
 
+- fixed mkdocs dependencies in github actions [\#12](https://github.com/madeinoz67/cookiecutter-kicad/pull/12)
 - update git workflows within project template [\#7](https://github.com/madeinoz67/cookiecutter-kicad/pull/7)
 
 ## [v2021.0.1](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2021.0.1) (2021-03-12)
