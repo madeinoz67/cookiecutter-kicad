@@ -15,7 +15,7 @@
     (date {% now 'utc', '%Y-%m-%d' %})
     (rev A)
     (comment 1 "Author: {{cookiecutter.author_name}}")
-    (comment 2 "Projects Github: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_github_repo_name}}")
+    (comment 2 "Projects Github: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_repo_name}}")
     (comment 3 "License: {{cookiecutter.license}}")
   )
 

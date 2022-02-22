@@ -19,4 +19,4 @@ Below are some handy resource links.
 
 * **{{ cookiecutter.author_name }}** - *Initial Work* - [github](https://github.com/{{cookiecutter.github_user}})
 
-See also the list of [contributors](https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_github_repo_name}}/AUTHORS.rst) who participated in this project.
+See also the list of [contributors](https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_repo_name}}/AUTHORS.rst) who participated in this project.
