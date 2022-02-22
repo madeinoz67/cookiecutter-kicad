@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased](https://github.com/madeinoz67/cookiecutter-kicad/tree/HEAD)
+## [v2022.0.1](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2022.0.1) (2022-02-22)
 
 **Fixed bugs:**
 
@@ -10,7 +10,6 @@
 
 - Bump urllib3 from 1.26.4 to 1.26.5 in /{{cookiecutter.project\_name}} [\#22](https://github.com/madeinoz67/cookiecutter-kicad/pull/22)
 - Bump mkdocs from 1.1.2 to 1.2.3 in /{{cookiecutter.project\_name}} [\#20](https://github.com/madeinoz67/cookiecutter-kicad/pull/20)
-- Fixes error due to incorrect github variable [\#19](https://github.com/madeinoz67/cookiecutter-kicad/pull/19)
 
 ## [v2021.0.3](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2021.0.3) (2021-03-18)
 
@@ -25,6 +24,7 @@
 
 **Merged pull requests:**
 
+- Fixes error due to incorrect github variable [\#19](https://github.com/madeinoz67/cookiecutter-kicad/pull/19)
 - implements poetry python dependency management [\#13](https://github.com/madeinoz67/cookiecutter-kicad/pull/13)
 
 ## [v2021.0.2](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2021.0.2) (2021-03-18)
