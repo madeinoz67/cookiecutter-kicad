@@ -1,6 +1,6 @@
 {
     "project_name": "Project Name",
-    "project_github_repo_name": "repo-name",
+    "project_repo_name": "repo-name",
     "project_description": "This is my Kicad Project",
     "author_name": "my_name",
     "author_email": "my_email@somewhere.com",

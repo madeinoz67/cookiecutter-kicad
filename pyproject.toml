@@ -7,9 +7,9 @@ license = "GPL-3.0"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-mkdocs-material = "^7.0.6"
-mkdocs-mermaid2-plugin = "^0.5.1"
-mkdocs-macros-plugin = "^0.5.5"
+mkdocs-material = "^8"
+mkdocs-mermaid2-plugin = "^0.5"
+mkdocs-macros-plugin = "^0.5"
 
 [tool.poetry.dev-dependencies]
 

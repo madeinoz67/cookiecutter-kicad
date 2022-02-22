@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "{{cookiecutter.repo-name}}"
+name = "{{cookiecutter.project_repo_name}}"
 version = "0.0.0"
 description = "{{cookiecutter.project_description}}"
 authors = ["{{cookiecutter.author_name}}"]
@@ -7,9 +7,9 @@ license = "{{cookiecutter.license}}"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-mkdocs-material = "^7.0.6"
-mkdocs-mermaid2-plugin = "^0.5.1"
-mkdocs-macros-plugin = "^0.5.5"
+mkdocs-material = "^8"
+mkdocs-mermaid2-plugin = "^0.5"
+mkdocs-macros-plugin = "^0.5"
 
 [tool.poetry.dev-dependencies]
 
