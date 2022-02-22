@@ -32,8 +32,8 @@ nav:
   - References: references.md
 
 # Repository
-repo_name: "{{cookiecutter.github_user}}/{{cookiecutter.project_github_repo_name}}"
-repo_url: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_github_repo_name}}
+repo_name: "{{cookiecutter.github_user}}/{{cookiecutter.project_repo_name}}"
+repo_url: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_repo_name}}
 edit_uri: ""
 
 # plugins
@@ -80,7 +80,7 @@ copyright: Copyright &copy; 2021 {{cookiecutter.author_name}}
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_github_repo_name}}
+      link: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_repo_name}}
 # Google Analytics
 #google_analytics:
 #  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
