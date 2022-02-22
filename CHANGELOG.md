@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased](https://github.com/madeinoz67/cookiecutter-kicad/tree/HEAD)
+
+**Merged pull requests:**
+
+- Fixes error due to incorrect github variable [\#19](https://github.com/madeinoz67/cookiecutter-kicad/pull/19)
+
 ## [v2021.0.3](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2021.0.3) (2021-03-18)
 
 **Implemented enhancements:**
