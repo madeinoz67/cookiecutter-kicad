@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Bump mkdocs from 1.1.2 to 1.2.3 in /{{cookiecutter.project\_name}} [\#20](https://github.com/madeinoz67/cookiecutter-kicad/pull/20)
 - Fixes error due to incorrect github variable [\#19](https://github.com/madeinoz67/cookiecutter-kicad/pull/19)
 
 ## [v2021.0.3](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2021.0.3) (2021-03-18)
