@@ -51,16 +51,16 @@ remote: Compressing objects: 100% (310/310), done.
 remote: Total 550 (delta 283), reused 479 (delta 222)
 Receiving objects: 100% (550/550), 127.66 KiB | 58 KiB/s, done.
 Resolving deltas: 100% (283/283), done.
-project_name [Project Name]: some widget
+project_name [Project Name]: Some Widget
 project_repo_name [repo-name]: some-widget
-project_description [This is my Kicad Project]: A hardware widget based on an ESP32
+project_description [This is my Kicad Project]: A Hardware Widget
 author_name [my_name]: Fred Smith
-author_email [my_email@somewhere.com]: fsmith@somewhere.com
+author_email [my_email@somewhere.com]: fsmith@nowhere.com
 github_user [my_gihub_username]: fsmith
 Select kicad_version:
 1 - 6.x
 2 - 5.x
-Choose from 1, 2 [1]: 
+Choose from 1, 2 [1]: 1
 Select license:
 1 - CC-A-SA
 2 - CC-A
@@ -69,7 +69,7 @@ Select license:
 5 - OSHD
 6 - TAPR
 7 - CERN-OHL-P
-Choose from 1, 2, 3, 4, 5, 6, 7 [1]: 
+Choose from 1, 2, 3, 4, 5, 6, 7 [1]:
 ```
 
 Enter the project and take a look around:
