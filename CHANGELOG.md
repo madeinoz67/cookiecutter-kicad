@@ -33,6 +33,7 @@
 **Implemented enhancements:**
 
 - Move dependency management to poetry [\#10](https://github.com/madeinoz67/cookiecutter-kicad/issues/10)
+- Update template workflows [\#6](https://github.com/madeinoz67/cookiecutter-kicad/issues/6)
 
 **Closed issues:**
 
@@ -54,10 +55,6 @@
 - update git workflows within project template [\#7](https://github.com/madeinoz67/cookiecutter-kicad/pull/7)
 
 ## [v2021.0.1](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2021.0.1) (2021-03-12)
-
-**Implemented enhancements:**
-
-- Update template workflows [\#6](https://github.com/madeinoz67/cookiecutter-kicad/issues/6)
 
 **Fixed bugs:**
 
