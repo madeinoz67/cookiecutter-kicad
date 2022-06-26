@@ -109,5 +109,5 @@ git add submodule git@github.com:<<gitusername>>/<<library-repo>>.git hardware/l
 1. Open up your installed version of KiCAD
 2. "File | Open Project"
 3. Located new project directory and navigate to the 'hardware' directory
-4. Select the 'some-widget.pro' file.
+4. Select the project file.
 5. press ok
