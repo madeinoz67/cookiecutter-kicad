@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cookiecutter-kicad"
-version = "2022.06.26"
+version = "2022.06.1"
 description = "Cookiecutter KiCad generates boilerplate for production-ready KiCad projects."
 authors = ["Stephen Eaton <seaton@strobotics.com.au>"]
 license = "GPL-3.0"
@@ -12,6 +12,7 @@ mkdocs-mermaid2-plugin = "^0.5"
 mkdocs-macros-plugin = "^0.5"
 
 [tool.poetry.dev-dependencies]
+pytest-cookies = "^0.6.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

@@ -1,21 +1,21 @@
 import os
-import sys
+from shutil import rmtree
 
 REMOVE_PATHS = [
-    '{% if cookiecutter.kicad_version != '5.x' %} kicad5 {% endiif %}',
-    '{% if cookiecutter.kicad_version != '6.x' %} kicad6 {% endiif %}'
+    '{% if cookiecutter.kicad_version != '5.x' %} kicad5 {% endif %}',
+    '{% if cookiecutter.kicad_version != '6.x' %} kicad6 {% endif %}'
 ]
 
 RENAME_PATH = [
-    '{% if cookiecutter.kicad_version == '5.x' %} kicad5 {% endiif %}',
-    '{% if cookiecutter.kicad_version == '6.x' %} kicad6 {% endiif %}'
+    '{% if cookiecutter.kicad_version == '5.x' %} kicad5 {% endif %}',
+    '{% if cookiecutter.kicad_version == '6.x' %} kicad6 {% endif %}'
 ]
 
 for path in REMOVE_PATHS:
     path = path.strip()
     if path and os.path.exists(path):
         if os.path.isdir(path):
-            os.rmdir(path)
+            rmtree(path)
         else:
             os.unlink(path)
 
