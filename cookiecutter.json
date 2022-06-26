@@ -5,9 +5,9 @@
     "author_name": "my_name",
     "author_email": "my_email@somewhere.com",
     "github_user": "my_gihub_username",
-    "kicad_version":[
-        "5.x",
-        "6.x"
+    "kicad_version": [
+        "6.x",
+        "5.x"
     ],
     "license": [
         "CC-A-SA",

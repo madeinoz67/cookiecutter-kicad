@@ -10,7 +10,7 @@ The project you create from this template has a few features to be aware of
 including:
 
 - [x] Kicad v5.x supported.
-- [ ] Kicad v6.x supported.
+- [x] Kicad v6.x supported.
 - [x] A [KiCAD](https://www.kicad.org/) project structure to get you going.
 - [x] A starting project document structure using [Mkdocs-Materials](https://squidfunk.github.io/mkdocs-material/) that automatically publishes to the projects github.io pages site on release. Inspiration for the document structure is based on the <https://hutscape.com/pine/> by Sayanee Basu <https://github.com/sayanee> and her great YouTube video around hardware documentation <https://youtu.be/uPitFGqjyPU>.
 - [x] Automated Release and Changelog management.
@@ -51,11 +51,16 @@ remote: Compressing objects: 100% (310/310), done.
 remote: Total 550 (delta 283), reused 479 (delta 222)
 Receiving objects: 100% (550/550), 127.66 KiB | 58 KiB/s, done.
 Resolving deltas: 100% (283/283), done.
-project_name [my-kicad-project]: some widget 
-project_github_repo_name [repo-name]: some-widget
+project_name [Project Name]: some widget
+project_repo_name [repo-name]: some-widget
 project_description [This is my Kicad Project]: A hardware widget based on an ESP32
 author_name [my_name]: Fred Smith
 author_email [my_email@somewhere.com]: fsmith@somewhere.com
+github_user [my_gihub_username]: fsmith
+Select kicad_version:
+1 - 6.x
+2 - 5.x
+Choose from 1, 2 [1]: 
 Select license:
 1 - CC-A-SA
 2 - CC-A
@@ -64,8 +69,7 @@ Select license:
 5 - OSHD
 6 - TAPR
 7 - CERN-OHL-P
-Choose from 1, 2, 3, 4, 5, 6, 7 [1]:
-github_user [my_github_user]: fsmith
+Choose from 1, 2, 3, 4, 5, 6, 7 [1]: 
 ```
 
 Enter the project and take a look around:

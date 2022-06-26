@@ -78,11 +78,32 @@ or if you want to run a command in the virtual environment:
 ``` bash
 poetry run some_command
 ```
+### Link in personal KiCad library (optional)
 
-## Open KiCad and open the project
+If you use a custom/personal KiCad library repository that can be linked into the project library folder, you can do so by:
+
+1.  Add the link to the library repository as a git submodule
+```bash
+git add submodule git@github.com:<<gitusername>>/<<library-repo>>.git hardware/library
+
+```
+!!! Important
+
+    replace `<<gitusername>>` with your git username.
+
+    replace `<<library-repo>>` with the name of your KiCad library repository.
+
+
+2. Update the git submodule
+
+    ```bash
+    git submodule update --remote hardware/library
+    ```
+
+### Open KiCad and open the project
 
 1. Open up your installed version of KiCAD
 2. "File | Open Project"
-3. Located new project directory and navigate to the 'kicad_pcb' directory
+3. Located new project directory and navigate to the 'hardware' directory
 4. Select the 'some-widget.pro' file.
 5. press ok
