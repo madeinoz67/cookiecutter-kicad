@@ -1,5 +1,15 @@
 # Changelog
 
+## [Unreleased](https://github.com/madeinoz67/cookiecutter-kicad/tree/HEAD)
+
+**Implemented enhancements:**
+
+- Feature: Add Kicad 6 support [\#23](https://github.com/madeinoz67/cookiecutter-kicad/issues/23)
+
+**Merged pull requests:**
+
+- removed kicad6/library directory as submodule will not use an existing directory [\#25](https://github.com/madeinoz67/cookiecutter-kicad/pull/25)
+
 ## [v2022.6.1](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2022.6.1) (2022-06-26)
 
 **Implemented enhancements:**
@@ -16,13 +26,13 @@
 
 - Bump urllib3 from 1.26.4 to 1.26.5 in /{{cookiecutter.project\_name}} [\#22](https://github.com/madeinoz67/cookiecutter-kicad/pull/22)
 - Bump mkdocs from 1.1.2 to 1.2.3 in /{{cookiecutter.project\_name}} [\#20](https://github.com/madeinoz67/cookiecutter-kicad/pull/20)
+- Fixes error due to incorrect github variable [\#19](https://github.com/madeinoz67/cookiecutter-kicad/pull/19)
 
 ## [v2021.0.3](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2021.0.3) (2021-03-18)
 
 **Implemented enhancements:**
 
 - Move dependency management to poetry [\#10](https://github.com/madeinoz67/cookiecutter-kicad/issues/10)
-- Update template workflows [\#6](https://github.com/madeinoz67/cookiecutter-kicad/issues/6)
 
 **Closed issues:**
 
@@ -45,6 +55,10 @@
 
 ## [v2021.0.1](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2021.0.1) (2021-03-12)
 
+**Implemented enhancements:**
+
+- Update template workflows [\#6](https://github.com/madeinoz67/cookiecutter-kicad/issues/6)
+
 **Fixed bugs:**
 
 - Documentation page is not updated with Current Changelog [\#4](https://github.com/madeinoz67/cookiecutter-kicad/issues/4)
@@ -56,7 +70,6 @@
 
 **Merged pull requests:**
 
-- Fixes error due to incorrect github variable [\#19](https://github.com/madeinoz67/cookiecutter-kicad/pull/19)
 - Added env variable to deploy-docs action [\#9](https://github.com/madeinoz67/cookiecutter-kicad/pull/9)
 - Feature project docs generation [\#2](https://github.com/madeinoz67/cookiecutter-kicad/pull/2)
 - Feature project docs generation [\#1](https://github.com/madeinoz67/cookiecutter-kicad/pull/1)
