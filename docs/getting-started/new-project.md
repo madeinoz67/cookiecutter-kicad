@@ -24,11 +24,16 @@ remote: Compressing objects: 100% (310/310), done.
 remote: Total 550 (delta 283), reused 479 (delta 222)
 Receiving objects: 100% (550/550), 127.66 KiB | 58 KiB/s, done.
 Resolving deltas: 100% (283/283), done.
-project_name [my-kicad-project]: some widget 
-project_github_repo_name [repo-name]: some-widget
-project_description [This is my Kicad Project]: A hardware widget based on an ESP32
+project_name [Project Name]: Some Widget
+project_repo_name [repo-name]: some-widget
+project_description [This is my Kicad Project]: A Hardware Widget
 author_name [my_name]: Fred Smith
-author_email [my_email@somewhere.com]: fsmith@somewhere.com
+author_email [my_email@somewhere.com]: fsmith@nowhere.com
+github_user [my_gihub_username]: fsmith
+Select kicad_version:
+1 - 6.x
+2 - 5.x
+Choose from 1, 2 [1]: 1
 Select license:
 1 - CC-A-SA
 2 - CC-A
@@ -38,7 +43,6 @@ Select license:
 6 - TAPR
 7 - CERN-OHL-P
 Choose from 1, 2, 3, 4, 5, 6, 7 [1]:
-github_user [my_github_user]: fsmith
 ```
 
 ## Enter the new project and take a look around
@@ -78,11 +82,32 @@ or if you want to run a command in the virtual environment:
 ``` bash
 poetry run some_command
 ```
+### Link in personal KiCad library (optional)
 
-## Open KiCad and open the project
+If you use a custom/personal KiCad library repository that can be linked into the project library folder, you can do so by:
+
+1.  Add the link to the library repository as a git submodule
+```bash
+git add submodule git@github.com:<<gitusername>>/<<library-repo>>.git hardware/library
+
+```
+!!! Important
+
+    replace `<<gitusername>>` with your git username.
+
+    replace `<<library-repo>>` with the name of your KiCad library repository.
+
+
+2. Update the git submodule
+
+    ```bash
+    git submodule update --remote hardware/library
+    ```
+
+### Open KiCad and open the project
 
 1. Open up your installed version of KiCAD
 2. "File | Open Project"
-3. Located new project directory and navigate to the 'kicad_pcb' directory
-4. Select the 'some-widget.pro' file.
+3. Located new project directory and navigate to the 'hardware' directory
+4. Select the project file.
 5. press ok

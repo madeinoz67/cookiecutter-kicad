@@ -1,6 +1,6 @@
 To use the cookiecutter-kicad template some utilities are required to be installed first.
 
-* Python (preferably 3.x)
+* Python3.6 or higher is required.
 * Python pip
 * cookiecutter
 * poetry
@@ -11,6 +11,8 @@ To use the cookiecutter-kicad template some utilities are required to be install
 ## Install Cookiecutter
 
 ``` bash
-pip install "cookiecutter>=1.4.0"`
-pip install "poetry"
+pip install cookiecutter
 ```
+## Install Poetry
+
+see <https://python-poetry.org/docs/#installation>

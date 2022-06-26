@@ -10,7 +10,7 @@ The project you create from this template has a few features to be aware of
 including:
 
 - [x] Kicad v5.x supported.
-- [ ] Kicad v6.x supported.
+- [x] Kicad v6.x supported.
 - [x] A [KiCAD](https://www.kicad.org/) project structure to get you going.
 - [x] A starting project document structure using [Mkdocs-Materials](https://squidfunk.github.io/mkdocs-material/) that automatically publishes to the projects github.io pages site on release. Inspiration for the document structure is based on the <https://hutscape.com/pine/> by Sayanee Basu <https://github.com/sayanee> and her great YouTube video around hardware documentation <https://youtu.be/uPitFGqjyPU>.
 - [x] Automated Release and Changelog management.

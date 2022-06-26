@@ -30,21 +30,6 @@ Any changes to the document files or mkdocs.yml will be automatically updated, w
 
 Project documentation will automatically be pushed to the projects github pages when updates / merges are applied to the Master branch only if the projects pages is enabled in the github panel.
 
-### Google Analytics
-
-To enable google analytics on your projects github page
-
-1. create a repository secret called `GOOGLE_ANALYTICS_KEY`
-2. copy your google site tracking key into the new secret.
-3. in `mkdocs.yml` uncomment the google analytics found at the bottom of the file
-4. Now each time your project site is deployed it will be updated with the google analytics key.
-
-```yaml
-google_analytics:
-  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
-  - auto
-```
-
 ## Diagrams using Mermaid
 
 ````markdown
