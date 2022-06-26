@@ -1,0 +1,13 @@
+(kicad_sch (version 20211123) (generator eeschema)
+  (paper "A4")
+  (title_block
+    (title "{{cookiecutter.project_description}}")
+    (date "{% now 'utc', '%Y-%m-%d' %}")
+    (rev "A")
+    (comment 1 "Author: {{cookiecutter.author_name}})
+    (comment 2 "Project Github: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_repo_name}})
+    (comment 3 "License: {{cookiecutter.license}}")
+  )
+  (lib_symbols)
+  (symbol_instances)
+)
