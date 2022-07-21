@@ -1,0 +1,26 @@
+# Gerber and drill files for review
+
+kibot:
+  version: 1
+
+outputs:
+  - name: gerbers
+    comment: Gerbers for review
+    type: gerber
+    dir: fabrication/generic_gerbers
+    layers:
+      - copper
+      - F.SilkS
+      - B.SilkS
+      - F.Mask
+      - B.Mask
+      - F.Paste
+      - B.Paste
+      - Edge.Cuts
+
+  - name: drill
+    comment: Drill files for review
+    type: excellon
+    dir: fabrication/generic_gerbers
+    options:
+      output: "%f%i.%x"

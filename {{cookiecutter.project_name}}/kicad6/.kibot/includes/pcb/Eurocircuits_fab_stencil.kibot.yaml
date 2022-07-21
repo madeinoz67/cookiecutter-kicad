@@ -1,0 +1,17 @@
+# Eurocircuits direcly accepts a KiCad file so it only needs to be zipped. 
+# URL: https://www.eurocircuits.com/
+
+kibot:
+  version: 1
+
+outputs:
+  - name: Eurocircuits
+    comment: ZIP file for Eurocircuits
+    type: compress
+    dir: fabrication
+    options:
+      files:
+        - source: ../hardware/*.kicad_pcb
+          dest: /
+        - source: hardware/*.kicad_pcb
+          dest: /

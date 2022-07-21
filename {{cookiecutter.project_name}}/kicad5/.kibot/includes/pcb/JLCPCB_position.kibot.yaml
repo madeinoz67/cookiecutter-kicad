@@ -1,0 +1,95 @@
+# Assembly files for JLCPCB
+# URL: https://jlcpcb.com/
+
+kibot:
+  version: 1
+
+filters:
+  - name: only_jlc_parts
+    comment: 'Only parts with JLC (LCSC) code'
+    type: generic
+    include_only:
+      - column: 'LCSC#'
+        regex: '^C\d+'
+  
+  - name: 'empty_mfn_mfp'
+    type: 'generic'
+    comment: 'Remove components without MFN or MFP values'
+    exclude_any:
+      - column: 'MFN'
+        regex: '^$'
+      - column: 'MFP'
+        regex: '^$'
+
+variants:
+  - name: rotated
+    comment: 'Just a place holder for the rotation filter'
+    type: kibom
+    variant: rotated
+    pre_transform: _rot_footprint
+
+outputs:
+  - name: 'JLCPCB_position'
+    comment: "Pick and place file, JLCPCB style"
+    type: position
+    dir: assembly/JLCPCB
+    options:
+      variant: rotated
+      output: '%f_rev_%r-cpl_jlc.%x'
+      format: CSV
+      units: millimeters
+      separate_files_for_front_and_back: false
+      only_smd: true
+      columns:
+        - id: Ref
+          name: Designator
+        - Val
+        - Package
+        - id: PosX
+          name: "Mid X"
+        - id: PosY
+          name: "Mid Y"
+        - id: Rot
+          name: Rotation
+        - id: Side
+          name: Layer
+
+  - name: 'JLCPCB_bom'
+    comment: "BoM for JLCPCB"
+    type: bom
+    dir: assembly/JLCPCB
+    options:
+      output: '%f_rev_%r-%i_jlc.%x'
+      exclude_filter: 'only_jlc_parts'
+      ref_separator: ','
+      columns:
+        - field: Value
+          name: Comment
+        - field: References
+          name: Designator
+        - Footprint
+        - field: 'LCSC#'
+          name: 'JLCPCB Part #'
+      csv:
+        hide_pcb_info: true
+        hide_stats_info: true
+        quote_all: true
+  
+  - name: "Manual_placement_bom"
+    comment: "Bom for manual placement after JLCPCB assembly"
+    type: bom
+    dir: bom/JLCPCB
+    options:
+      output: '%f_rev_%r-%i_MANUAL_PLACEMENT.%x'
+      exclude_filter: ['!only_jlc_parts', 'empty_mfn_mfp']
+      csv:
+        hide_pcb_info: true
+        hide_stats_info: true
+        quote_all: true
+      columns:
+        - field: MFP
+          name: Part
+        - field: MFN
+          name: Manufacturer
+        - References
+        - Quantity Per PCB

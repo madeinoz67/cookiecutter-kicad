@@ -1,0 +1,123 @@
+# This workflow generates documentation (PDFs, interactive BOMs, board images) and fabrication
+# files for JLCPCB. The version number and date of the design is automatically
+# updated in the schematic file and on the PCB based on the GitLab release version and date.
+
+variables:
+  OutputFolder: outputs
+
+stages:
+  - run_erc
+  - run_drc
+  - gen_fab
+  - release
+
+image:
+  name: setsoft/kicad_auto@sha256:3237469cb90e91601e629d1626960b5de93265f93098f96b64671ef6cc142cb2
+
+before_script:
+  - export DATE=$(echo $CI_PIPELINE_CREATED_AT | cut -d 'T' -f 1)
+
+erc:
+  stage: run_erc
+  script:
+    - "[ -f hardware/*.kicad_sch ] && kibot -c hardware/.kibot/full_outputs.kibot.yaml -s update_xml,run_drc -e pcb/kicad_project/$(find ./pcb/kicad_project -iname *.pro -execdir basename {} .kicad_pro ';').kicad_sch -d $OutputFolder -i -g output='%f-%i.%x'"
+  rules:
+    - changes:
+      - "**.kicad_sch"
+      - ".gitlab-ci.yml"
+      when: always
+  artifacts:
+    when: always
+    paths: 
+      - $OutputFolder/*-erc.txt
+
+drc:
+  stage: run_drc
+  script:
+    - "[ -f hardware/*.kicad_pcb ] && kibot -c hardware/.kibot/full_outputs.kibot.yaml -s update_xml,run_erc -b pcb/kicad_project/$(find ./pcb/kicad_project -iname *.pro -execdir basename {} .pro ';').kicad_pcb -d $OutputFolder -i -g output='%f-%i.%x'"
+  rules:
+    - changes:
+      - "**.kicad_pcb"
+      - ".gitlab-ci.yml"
+      when: always
+  artifacts:
+    when: always
+    paths:
+      - $OutputFolder/*-drc.txt
+
+full_outputs:
+  stage: gen_fab
+  variables:
+    VERSION: $CI_COMMIT_TAG
+  script:
+    - find . -type f \( -name '*.sch' -o -name '*.kicad_pcb' \) -exec sed -i "s/%%version%%/$VERSION/g" {} +
+    - find . -type f \( -name '*.sch' -o -name '*.kicad_pcb' \) -exec sed -i "s/%%date%%/$DATE/g" {} +
+    - "[ -f hardware/*.kicad_pcb ] && kibot -c hardware/.kibot/full_outputs.kibot.yaml -s run_drc,run_erc -e pcb/kicad_project/$(find ./pcb/kicad_project -iname *.pro -execdir basename {} .pro ';').sch -b pcb/kicad_project/$(find ./pcb/kicad_project -iname *.pro -execdir basename {} .kicad_pro ';').kicad_pcb -d $OutputFolder"
+  only:
+    - tags
+  except:
+    - branches
+  when: on_success
+  artifacts:
+    when: always
+    name: "$CI_PROJECT_NAME-$CI_COMMIT_TAG"
+    paths:
+      - "$OutputFolder/3d_models"
+      - "$OutputFolder/assembly"
+      - "$OutputFolder/bom"
+      - "$OutputFolder/fabrication"
+      - "$OutputFolder/images"
+      - "$OutputFolder/pdf"
+      - "$OutputFolder/*-drc.txt"
+      - "$OutputFolder/*-erc.txt"
+
+schematic_outputs:
+  stage: gen_fab
+  variables:
+    VERSION: 'pre-release'
+  script:
+    - find . -type f \( -name '*.sch' -o -name '*.kicad_pcb' \) -exec sed -i "s/%%version%%/$VERSION/g" {} +
+    - find . -type f \( -name '*.sch' -o -name '*.kicad_pcb' \) -exec sed -i "s/%%date%%/$DATE/g" {} +
+    - "[ -f hardware/*.kicad_sch ] && kibot -c hardware/.kibot/schematic_outputs.kibot.yaml -s run_drc,run_erc -e pcb/kicad_project/$(find ./pcb/kicad_project -iname *.pro -execdir basename {} .kicad_pro ';').kicad_sch -d $OutputFolder"
+  when: manual
+  artifacts:
+    when: always
+    name: "$CI_PROJECT_NAME-$VERSION-$(echo $CI_PIPELINE_CREATED_AT | cut -d 'T' -f 1)"
+    paths:
+      - $OutputFolder/**
+    exclude:
+      - $OutputFolder/*.csv
+
+generic_gerbers:
+  stage: gen_fab
+  variables:
+    VERSION: 'gerb-review'
+  script: 
+    - find . -type f \( -name '*.kicad_sch' -o -name '*.kicad_pcb' \) -exec sed -i "s/%%version%%/$VERSION/g" {} +
+    - find . -type f \( -name '*.kicad_sch' -o -name '*.kicad_pcb' \) -exec sed -i "s/%%date%%/$DATE/g" {} +
+    - "[ -f hardware/*.kicad_pcb ] && kibot -c hardware/.kibot/gerber_outputs.kibot.yaml -s run_drc,run_erc -b hardware/$(find ./hardware -iname *.kicad_pro -execdir basename {} .kicad_pro ';').kicad_pcb -d $OutputFolder"
+  when: manual
+  artifacts:
+    when: always
+    name: "$CI_PROJECT_NAME-$VERSION-$(echo $CI_PIPELINE_CREATED_AT | cut -d 'T' -f 1)"
+    paths:
+      - $OutputFolder/**
+    exclude:
+      - $OutputFolder/*.csv
+
+release:
+  stage: release
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  rules:
+    - if: $CI_COMMIT_TAG  # Run this job when a tag is created manually
+  script:
+    - echo "running release"
+  release:
+    name: 'Release $CI_COMMIT_TAG'
+    description: 'Created using the release-cli'
+    tag_name: '$CI_COMMIT_TAG'
+    ref: '$CI_COMMIT_TAG'
+    assets:
+      links:
+        - name: 'fabrication-files'
+          url: "$CI_PROJECT_URL/-/jobs/artifacts/$CI_COMMIT_TAG/download?job=full_outputs"

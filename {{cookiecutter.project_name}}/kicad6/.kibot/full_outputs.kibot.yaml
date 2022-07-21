@@ -1,0 +1,27 @@
+# This script is called by the .github/workflows/gen_full_outputs.yml workflow.
+
+kibot:
+  version: 1
+
+preflight:
+  run_erc: true
+  run_drc: true
+  update_xml: true
+  
+  # This is important to set to true so replacement of version and date strings in the release
+  # build process works correctly.
+  check_zone_fills: true
+
+global:
+  output: '%f_rev_%r-%i.%x'
+
+# This imports the KiBot scripts that actuall do all the generation. If you want to
+# generate different things/more things then change these to point to other .kibot.yaml files.
+import:
+  - file: includes/schematic/documentation.kibot.yaml
+  - file: includes/pcb/documentation.kibot.yaml
+  - file: includes/pcb/generic_gerbers.kibot.yaml
+  - file: includes/pcb/Eurocircuits_position.kibot.yaml
+  - file: includes/pcb/Eurocircuits_fab_stencil.kibot.yaml
+  - file: includes/pcb/JLCPCB_position.kibot.yaml
+  - file: includes/pcb/JLCPCB_fab_stencil.kibot.yaml

@@ -1,0 +1,36 @@
+# Assembly files for Eurocircuits
+# URL: https://www.eurocircuits.com/
+
+kibot:
+  version: 1
+
+filters:
+  - name: 'empty_mfn_mfp'
+    type: 'generic'
+    comment: 'Remove components without MFN or MFP values'
+    exclude_any:
+      - column: 'MFN'
+        regex: '^$'
+      - column: 'MFP'
+        regex: '^$'
+
+outputs:
+  - name: 'Eurocircuits_bom'
+    comment: "BoM for Eurocircuits"
+    type: bom
+    dir: assembly/Eurocircuits
+    options:
+      output: '%f_rev_%r-%i_eurocircuits.%x'
+      ref_separator: ','
+      columns:
+        - field: Value
+          name: Comment
+        - field: References
+          name: Designator
+        - Footprint
+        - field: 'MFN'
+          name: 'MPN'
+      csv:
+        hide_pcb_info: true
+        hide_stats_info: true
+        quote_all: true

@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "{{cookiecutter.project_description}}"
-Date "{% now 'utc', '%Y-%m-%d' %}"
-Rev "A"
+Date "%%date%%"
+Rev "%%version%%"
 Comp ""
 Comment1 "Author: {{cookiecutter.author_name}}"
 Comment2 "Projects Github: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_repo_name}}"

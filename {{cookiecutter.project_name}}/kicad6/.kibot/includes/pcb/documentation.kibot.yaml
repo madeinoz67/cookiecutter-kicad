@@ -1,0 +1,168 @@
+# This KiBot script generates common documentation files a board design, including PDF schematics, 
+# PDF front and back board images, an interactive HTML BOM, JPEG renders of the PCB, and a STEP 3D model. 
+#
+# Note that the STEP 3D model generation will throw a ton of warnings and errors but does actually work.
+
+kibot:
+  version: 1
+
+filters:
+  - name: 'mechanical'
+    type: 'generic'
+    comment: 'Remove mechanical components by reference.'
+    exclude_refs:
+    - H*
+    - Logo*
+
+outputs:
+  - name: "print_front"
+    comment: "PDF - front copper and user drawings"
+    type: pdf_pcb_print
+    dir: "pdf"
+    layers:
+      - layer: F.Cu
+      - layer: Dwgs.User
+
+  - name: "print_inner_1"
+    comment: "PDF - inner 1 copper and user drawings"
+    type: pdf_pcb_print
+    dir: "pdf"
+    layers:
+      - layer: In1.Cu
+      - layer: Dwgs.User
+      
+  - name: "print_inner_2"
+    comment: "PDF - inner 2 copper and user drawings"
+    type: pdf_pcb_print
+    dir: "pdf"
+    layers:
+      - layer: In2.Cu
+      - layer: Dwgs.User
+      
+  - name: "print_inner_3"
+    comment: "PDF - inner 3 copper and user drawings"
+    type: pdf_pcb_print
+    dir: "pdf"
+    layers:
+      - layer: In3.Cu
+      - layer: Dwgs.User
+      
+  - name: "print_inner_4"
+    comment: "PDF - inner 4 copper and user drawings"
+    type: pdf_pcb_print
+    dir: "pdf"
+    layers:
+      - layer: In4.Cu
+      - layer: Dwgs.User
+      
+  - name: "print_bottom"
+    comment: "PDF - back copper and user drawings"
+    type: pdf_pcb_print
+    dir: "pdf"
+    layers:
+      - layer: B.Cu
+      - layer: Dwgs.User
+
+  - name: "print_silk_top"
+    comment: "PDF - front silk and user drawings"
+    type: pdf_pcb_print
+    dir: "pdf"
+    layers:
+      - layer: F.SilkS
+      - layer: Dwgs.User
+
+  - name: "print_silk_bottom"
+    comment: "PDF - back silk and user drawings"
+    type: pdf_pcb_print
+    dir: "pdf"
+    layers:
+      - layer: B.SilkS
+      - layer: Dwgs.User
+
+  - name: "print_paste_top"
+    comment: "PDF - front paste and user drawings"
+    type: pdf_pcb_print
+    dir: "pdf"
+    layers:
+      - layer: F.Paste
+      - layer: Dwgs.User
+
+  - name: "print_paste_bottom"
+    comment: "PDF - back paste and user drawings"
+    type: pdf_pcb_print
+    dir: "pdf"
+    layers:
+      - layer: B.Paste
+      - layer: Dwgs.User
+
+  - name: "print_mask_top"
+    comment: "PDF - front soldermask and user drawings"
+    type: pdf_pcb_print
+    dir: "pdf"
+    layers:
+      - layer: F.Mask
+      - layer: Dwgs.User
+
+  - name: "print_mask_bottom"
+    comment: "PDF - back soldermask and user drawings"
+    type: pdf_pcb_print
+    dir: "pdf"
+    layers:
+      - layer: B.Mask
+      - layer: Dwgs.User
+
+  - name: pcb_top
+    comment: "Renders - top"
+    type: pcbdraw
+    dir: "images"
+    options:
+      format: jpg
+      show_components: none
+      dpi: 600
+      output: "%f-%i-bare.%x"
+
+  - name: pcb_bot
+    comment: "Renders - bottom"
+    type: pcbdraw
+    dir: "images"
+    options:
+      format: jpg
+      bottom: True
+      show_components: none
+      dpi: 600
+      output: "%f-%i-bare.%x"
+
+  - name: pcb_top_components
+    comment: "Renders - top"
+    type: pcbdraw
+    dir: "images"
+    options:
+      format: jpg
+      show_components: all
+      dpi: 600
+      output: "%f-%i-components.%x"
+
+  - name: pcb_bot_components
+    comment: "Renders - bottom"
+    type: pcbdraw
+    dir: "images"
+    options:
+      format: jpg
+      bottom: True
+      show_components: all
+      dpi: 600
+      output: "%f-%i-components.%x"
+
+  - name: step
+    comment: "Renders - 3D model (STEP)"
+    type: step
+    dir: "3d_models"
+    options:
+      metric_units: true
+    
+  - name: ibom
+    comment: "Generate interactive BOM"
+    type: ibom
+    dir: "bom"
+    options:
+      dnf_filter: ['_mechanical', 'mechanical', '_kibom_dnf']
