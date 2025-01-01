@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Bump certifi from 2022.6.15 to 2022.12.7 [\#27](https://github.com/madeinoz67/cookiecutter-kicad/pull/27)
 - Bump certifi from 2020.12.5 to 2022.12.7 in /{{cookiecutter.project\_name}} [\#26](https://github.com/madeinoz67/cookiecutter-kicad/pull/26)
 
 ## [v2022.6.2](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2022.6.2) (2022-06-26)
