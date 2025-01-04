@@ -1,0 +1,10 @@
+- [ ] Check all components are placed correctly on the PCB layout.
+- [ ] Verify all traces are routed properly with no shorts or overlaps.
+- [ ] Ensure there's a clearance between traces and any copper pours.
+- [ ] Confirm that all vias are present and routed correctly.
+- [ ] Make sure the design rules for Kicad PCB are followed, including trace widths, spacings, and drill sizes.
+- [ ] Check that all components have proper footprint assignments.
+- [ ] Verify that all necessary courtyards or keepouts are present around sensitive areas.
+- [ ] Ensure all text layers (silkscreen, pin numbers) are readable and correct.
+- [ ] Confirm that all required documentation is included in the design files (schematic, board layout, gerber files).
+- [ ] Review the PCB for any potential manufacturing issues or design flaws.
