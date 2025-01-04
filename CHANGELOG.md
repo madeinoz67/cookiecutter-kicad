@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased](https://github.com/madeinoz67/cookiecutter-kicad/tree/HEAD)
+
+[Full Changelog](https://github.com/madeinoz67/cookiecutter-kicad/compare/v2025.1.2...HEAD)
+
+**Implemented enhancements:**
+
+- Kicad 8 Support [\#35](https://github.com/madeinoz67/cookiecutter-kicad/issues/35)
+- 35 kicad 8 support [\#36](https://github.com/madeinoz67/cookiecutter-kicad/pull/36) ([madeinoz67](https://github.com/madeinoz67))
+
 ## [v2025.1.2](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2025.1.2) (2025-01-04)
 
 [Full Changelog](https://github.com/madeinoz67/cookiecutter-kicad/compare/v2025.1.1...v2025.1.2)
