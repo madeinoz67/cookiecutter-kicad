@@ -6,6 +6,7 @@
     "author_email": "my_email@somewhere.com",
     "github_user": "my_gihub_username",
     "kicad_version": [
+        "8.x",
         "6.x",
         "5.x"
     ],
