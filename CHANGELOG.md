@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/madeinoz67/cookiecutter-kicad/tree/HEAD)
+## [v2024.1.3](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2024.1.3) (2025-01-04)
 
-[Full Changelog](https://github.com/madeinoz67/cookiecutter-kicad/compare/v2025.1.2...HEAD)
+[Full Changelog](https://github.com/madeinoz67/cookiecutter-kicad/compare/v2025.1.2...v2024.1.3)
 
 **Implemented enhancements:**
 
