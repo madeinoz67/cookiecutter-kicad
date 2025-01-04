@@ -31,6 +31,8 @@ nav:
       - bom.md
   - Design:
       - design/design.md
+  - Github:
+      - github.md
   - Authors: authors.md
   - Change Log: changelog.md
   - References: references.md
@@ -76,6 +78,7 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg # Copyright
+
 
 copyright: Copyright &copy; 2021 {{cookiecutter.author_name}}
 
