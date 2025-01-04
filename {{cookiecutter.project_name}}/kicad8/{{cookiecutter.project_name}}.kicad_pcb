@@ -1,0 +1,15 @@
+(kicad_pcb (version 20211014) (generator pcbnew)
+
+  (general
+    (thickness 1.6)
+  )
+
+  (title_block
+    (title "{{cookiecutter.project_description}}")
+    (date "{% now 'utc', '%Y-%m-%d' %}")
+    (rev "A")
+    (comment 1 "Author: {{cookiecutter.author_name}}")
+    (comment 2 "Project Github: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_repo_name}}")
+    (comment 3 "License: {{cookiecutter.license}}")
+  )
+)
