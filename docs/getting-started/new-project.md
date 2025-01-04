@@ -83,6 +83,27 @@ or if you want to run a command in the virtual environment:
 ``` bash
 poetry run some_command
 ```
+
+### Publishing Documentation to github pages
+
+mkdocs needs to be initialised after the project has been initially pushed to github. This will create the 'gh-pages' branch to manage the documentation publishing for github pages.
+
+from the project root directory run:
+
+``` bash
+poetry run mkdocs gh-deploy
+```
+
+Then in the github repository settings, set the github pages source to the gh-pages branch in settings | pages | source
+    - Source = Deploy from branch
+    - Branch = gh-pages /root
+
+Now the github actions will automatically publish the documentation to github pages on every release.
+
+### Update Repository Documentation URL (optional)
+
+It's a good idea to update the repository documentation url to the github pages url in both the README.md and the github repository about page, this available on the landing page of your repository in top right hand corner.  Click on the gear icon to update the project description and website url.
+
 ### Link in personal KiCad library (optional)
 
 If you use a custom/personal KiCad library repository that can be linked into the project library folder, you can do so by:
