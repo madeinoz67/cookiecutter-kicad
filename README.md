@@ -59,8 +59,9 @@ author_name [my_name]: Fred Smith
 author_email [my_email@somewhere.com]: fsmith@nowhere.com
 github_user [my_gihub_username]: fsmith
 Select kicad_version:
-1 - 6.x
-2 - 5.x
+1 - 8.x
+2 - 6.x
+3 - 5.x
 Choose from 1, 2 [1]: 1
 Select license:
 1 - CC-A-SA
@@ -114,4 +115,4 @@ This project is [hosted on GitHub](https://github.com/madeinoz67/cookiecutter-ki
 
 ## License
 
-Copyright © 2021 Stephen Eaton. This program is released under the GPLv3 license, which you can find in the file [LICENSE](LICENSE).
+Copyright © 2025 Stephen Eaton. This program is released under the GPLv3 license, which you can find in the file [LICENSE](LICENSE).
