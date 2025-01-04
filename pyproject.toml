@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cookiecutter-kicad"
-version = "2025.1.4"
+version = "2025.1.5"
 description = "Cookiecutter KiCad generates boilerplate for production-ready KiCad projects."
 authors = ["Stephen Eaton <seaton@strobotics.com.au>"]
 license = "GPL-3.0"
