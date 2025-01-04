@@ -19,7 +19,7 @@ jobs:
         with:
           ref: main
       - name: Update Changelog
-        uses: heinrichreimer/github-changelog-generator-action@v2.1.1
+        uses: heinrichreimer/github-changelog-generator-action@v2.4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           issues: true
@@ -27,7 +27,8 @@ jobs:
           pullRequests: true
           prWoLabels: true
           addSections: '{"documentation":{"prefix":"**Documentation:**","labels":["documentation"]}}'
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Git Auto Commit
+        uses: stefanzweifel/git-auto-commit-action@v5.0.1
         with:
           commit_message: Update Changelog for tag ${{ env.CURRENT_VERSION }}
           file_pattern: CHANGELOG.md
@@ -49,21 +50,17 @@ jobs:
         with:
           ref: main
 
-      - name: Get Changelog Entry
+      - name: Changelog Reader
+        uses: mindsers/changelog-reader-action@v2.2.3
         id: changelog_reader
-        uses: mindsers/changelog-reader-action@v1
         with:
           version: ${{ env.CURRENT_VERSION }}
           path: ./CHANGELOG.md
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
+      - name: Github Release
+        uses: elgohr/Github-Release-Action@release-20241111151247
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: ${{ steps.changelog_reader.outputs.log_entry }}
-          draft: false
-          prerelease: false
+          tag: ${{ github.ref }}
+          title: Release ${{ github.ref }}

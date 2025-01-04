@@ -6,7 +6,7 @@ on:
       - completed
 env:
   PYTHON_VERSION: 3.x
-  POETRY_VERSION: 1.1.4
+  POETRY_VERSION: 1.8.x
 
 jobs:
   documentation:
@@ -22,7 +22,7 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Python Poetry Action
-        uses: abatilo/actions-poetry@v2.1.0
+        uses: abatilo/actions-poetry@v4.0.0
         with:
           poetry-version: ${{ env.POETRY_VERSION }}
 
