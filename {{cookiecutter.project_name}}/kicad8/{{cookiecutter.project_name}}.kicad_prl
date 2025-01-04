@@ -3,10 +3,12 @@
     "active_layer": 0,
     "active_layer_preset": "All Layers",
     "auto_track_width": true,
+    "hidden_netclasses": [],
     "hidden_nets": [],
     "high_contrast_mode": 0,
     "net_color_mode": 1,
     "opacity": {
+      "images": 0.6,
       "pads": 1.0,
       "tracks": 1.0,
       "vias": 1.0,
@@ -65,11 +67,42 @@
     "visible_layers": "fffffff_ffffffff",
     "zone_display_mode": 0
   },
+  "git": {
+    "repo_password": "",
+    "repo_type": "",
+    "repo_username": "",
+    "ssh_key": ""
+  },
   "meta": {
     "filename": "{{cookiecutter.project_name}}.kicad_prl",
     "version": 3
   },
   "project": {
-    "files": []
+    "files": [
+      {
+        "name": "{{cookiecutter.project_name}}.kicad_sch",
+        "open": false,
+        "window": {
+          "display": 2,
+          "maximized": true,
+          "pos_x": -1524,
+          "pos_y": -1389,
+          "size_x": 1497,
+          "size_y": 929
+        }
+      },
+      {
+        "name": "{{cookiecutter.project_name}}.kicad_pcb",
+        "open": false,
+        "window": {
+          "display": 2,
+          "maximized": false,
+          "pos_x": -1552,
+          "pos_y": -1431,
+          "size_x": 1955,
+          "size_y": 1134
+        }
+      }
+    ]
   }
 }
