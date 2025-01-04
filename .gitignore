@@ -4,3 +4,4 @@ settings.json
 configurationCache.log
 dryrun.log
 targets.log
+poetry.lock
