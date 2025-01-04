@@ -1,5 +1,9 @@
 # Changelog
 
+## [v2025.1.5](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2025.1.5) (2025-01-04)
+
+[Full Changelog](https://github.com/madeinoz67/cookiecutter-kicad/compare/v2025.1.4...v2025.1.5)
+
 ## [v2025.1.4](https://github.com/madeinoz67/cookiecutter-kicad/tree/v2025.1.4) (2025-01-04)
 
 [Full Changelog](https://github.com/madeinoz67/cookiecutter-kicad/compare/v2025.1.2...v2025.1.4)
